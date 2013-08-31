@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
 </head>
-  <body ng-app="makeshiftApp">
+  <body ng-app="makeshiftApp" ng-controller="MainCtrl">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -26,13 +26,13 @@
     <![endif]-->
     
     <header>
-      <nav class="navbar navbar-default" role="navigation">
+      <nav class="navbar  navbar-inverse" role="navigation">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#/">Makeshift</a>
+          <a class="navbar-brand" href="#/" style="padding: 0px;"><img src="images/templogo.png"></img></a>
           <ul class="nav navbar-nav">
-            <li class=""><a href="#/edit">Edit Challenge</a></li>
-            <li class=""><a href="#/view">View Challenge</a></li>
-            <li><a href="#/create" type="button">Create Challenge</a></li>
+            <li><a href="#/project/new">Create Challenge</a></li>
+            <li class=""><a href="#/project/1/edit">Edit Challenge</a></li>
+            <li class=""><a href="#/user/1/project/1/">View Challenge</a></li>
           </ul>
         </div>
         <a type="button" class="btn btn-primary login-btn navbar-btn pull-right" href="#/login">Sign in with Twitter</a>
@@ -55,6 +55,7 @@
 
     <script src="bower_components/jquery/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
 
         <!-- build:js scripts/plugins.js -->
         <script src="bower_components/bootstrap-sass/js/bootstrap-affix.js"></script>

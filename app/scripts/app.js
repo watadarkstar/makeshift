@@ -4,19 +4,18 @@ angular.module('makeshiftApp', [])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        templateUrl: 'views/main.html'
       })
       .when('/login', {
         templateUrl: 'views/login.html'
       })
-      .when('/view', {
+      .when('/user/:id/project/:id/', {
         templateUrl: 'views/view.html'
       })
-      .when('/create', {
-        templateUrl: 'views/create.html'
+      .when('/project/new', {
+        templateUrl: 'views/new.html'
       })
-      .when('/edit', {
+      .when('/project/:id/edit', {
         templateUrl: 'views/edit.html'
       })
       .otherwise({
