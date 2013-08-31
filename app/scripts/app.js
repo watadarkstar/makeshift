@@ -8,8 +8,16 @@ angular.module('makeshiftApp', [])
         controller: 'MainCtrl'
       })
       .when('/login', {
-        templateUrl: 'views/login.html',
-        controller: 'LoginCtrl'
+        templateUrl: 'views/login.html'
+      })
+      .when('/view', {
+        templateUrl: 'views/view.html'
+      })
+      .when('/create', {
+        templateUrl: 'views/create.html'
+      })
+      .when('/edit', {
+        templateUrl: 'views/edit.html'
       })
       .otherwise({
         redirectTo: '/'

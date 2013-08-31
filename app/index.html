@@ -25,12 +25,19 @@
       <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
     
-    <nav class="navbar navbar-default" role="navigation">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#/">Makeshift</a>
-      </div>
-      <a type="button" class="btn btn-default login-btn navbar-btn pull-right" href="#/login">Sign in</a>
-    </nav>
+    <header>
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#/">Makeshift</a>
+          <ul class="nav navbar-nav">
+            <li class=""><a href="#/edit">Edit Challenge</a></li>
+            <li class=""><a href="#/view">View Challenge</a></li>
+            <li><a href="#/create" type="button">Create Challenge</a></li>
+          </ul>
+        </div>
+        <a type="button" class="btn btn-primary login-btn navbar-btn pull-right" href="#/login">Sign in with Twitter</a>
+      </nav>
+    </header>
     
     <!-- Add your site or application content here -->
     <div class="container" ng-view=""></div>
