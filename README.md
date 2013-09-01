@@ -38,14 +38,14 @@ Manually install angular generator (don't need to do this if you just go npm ins
 	npm install -g generator-angular
 
 Run server
-	cd makeshift/
-	grunt server
+    cd makeshift/
+    grunt server
 
 Run the unit tests 
-	grunt test
+    grunt test
 
 Build an optimized, production-ready version of the app (do not do this unless your serious YO)
-	grunt
+    grunt
 
 Generating angular stuff
 
