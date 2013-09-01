@@ -13,7 +13,6 @@ You must have the following installed to start developing
 + [Node JS](http://nodejs.org/)
 + [Yoeman](http://yeoman.io/)
 + [Compass](http://compass-style.org/install/)
-
 + [Ruby (we assume you have this)](https://www.ruby-lang.org/en/downloads/)
 + [Git (we assume you have this)](https://help.github.com/articles/set-up-git)
 
