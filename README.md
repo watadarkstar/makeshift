@@ -58,6 +58,7 @@ Generating angular stuff
 	yo angular:service myService
 
 Install one or more bower dependencies
+
 	bower install <dep>..<depN>
 
 ## Developer
