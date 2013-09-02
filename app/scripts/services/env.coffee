@@ -6,7 +6,7 @@ angular.module('makeshiftApp')
 			env: "local"
 		}
 
-		service.domain = location.protocol + '//' + location.hostname + if location.port? then ':' + location.port
+		service.domain = location.href.replace(location.hash, '')
 
 		service.isLocal = ->
 			return env is "local"
