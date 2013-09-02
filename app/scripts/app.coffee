@@ -17,6 +17,7 @@ angular.module('makeshiftApp', [])
       })
       .when('/authenticate', {
         templateUrl: 'views/authenticate.html',
+        controller: "AuthenticateCtrl"
         access: {
           user: false
         }

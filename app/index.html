@@ -27,7 +27,7 @@
     
     <header>
       <nav class="navbar navbar-inverse" role="navigation" style="margin: 0px;">
-        <div class="navbar-header">
+        <div class="navbar-header" >
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
@@ -36,13 +36,16 @@
           </button>
           <a class="navbar-brand" href="#/" style="padding: 0px;"><img src="images/templogo.png"></img></a>
         </div>
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
-          <ul class="nav navbar-nav">
+        <div class="collapse navbar-collapse navbar-ex1-collapse" >
+          <ul class="nav navbar-nav" ng-show="User.user.auth_token">
             <li><a href="#/project/new">Create Challenge</a></li>
             <li class=""><a href="#/project/1/edit">Edit Challenge</a></li>
             <li class=""><a href="#/user/1/project/1/">View Challenge</a></li>
           </ul>
-          <a type="button" class="btn btn-primary login-btn navbar-btn pull-right" ng-click="login()">Sign in with Twitter</a>
+          <a type="button" class="btn btn-primary login-btn navbar-btn pull-right" ng-show="!User.user.auth_token" ng-click="User.loginTwitter()">Sign in with Twitter</a>
+          <ul class="nav navbar-nav navbar-right" ng-show="User.user.auth_token" >
+            <li><a ng-click="User.logout()">Logout</a></li>
+          </ul>
         </div>
       </nav>
     </header>
@@ -81,6 +84,7 @@
         <script src="scripts/services/project.js"></script>
         <script src="scripts/controllers/authenticate.js"></script>
         <script src="scripts/services/env.js"></script>
+        <script src="scripts/services/baseApi.js"></script>
         <!-- endbuild -->
 </body>
 </html>
