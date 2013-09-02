@@ -61,6 +61,12 @@ Install one or more bower dependencies
 
 	bower install <dep>..<depN>
 
+## Known Issues
+
+Grunt build is not working for certian versions [see here](https://github.com/yeoman/generator-webapp/issues/140). Use this code:
+
+	npm install grunt-contrib-imagemin@0.1.4
+
 ## Developer
 
 Developed by Adrian Carolli
