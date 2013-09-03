@@ -61,6 +61,19 @@ Install one or more bower dependencies
 
 	bower install <dep>..<depN>
 
+## Deploying
+
+Build project use either or
+
+	grunt
+	grunt build
+
+Push to subtree (after add and committing)
+
+	git subtree push --prefix dist origin gh-pages
+
+To setup DNS [go here](https://help.github.com/articles/setting-up-a-custom-domain-with-pages)
+
 ## Known Issues
 
 Grunt build is not working for certian versions [see here](https://github.com/yeoman/generator-webapp/issues/140). Use this code:
