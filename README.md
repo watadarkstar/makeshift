@@ -74,6 +74,10 @@ Push to subtree (after add and committing)
 
 To setup DNS [go here](https://help.github.com/articles/setting-up-a-custom-domain-with-pages)
 
+## API
+
++ [Admin](http://makeshift-rails.herokuapp.com/admin/login)
+
 ## Known Issues
 
 Grunt build is not working for certian versions [see here](https://github.com/yeoman/generator-webapp/issues/140). Use this code:
