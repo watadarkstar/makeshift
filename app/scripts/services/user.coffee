@@ -2,7 +2,6 @@
 
 angular.module('makeshiftApp')
 	.service('User', ($location, Env) ->
-		console.log $.cookie
 		$.cookie.json = true
 		userCache = $.cookie('user')
 
