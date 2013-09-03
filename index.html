@@ -35,12 +35,15 @@
           <a class="navbar-brand" href="#/" style="padding: 0px"><img src="images/templogo.png"></a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
-          <ul class="nav navbar-nav">
+          <ul class="nav navbar-nav" ng-show="User.user.auth_token">
             <li><a href="#/project/new">Create Challenge</a></li>
             <li class=""><a href="#/project/1/edit">Edit Challenge</a></li>
             <li class=""><a href="#/user/1/project/1/">View Challenge</a></li>
           </ul>
-          <a type="button" class="btn btn-primary login-btn navbar-btn pull-right" ng-click="login()">Sign in with Twitter</a>
+          <a type="button" class="btn btn-primary login-btn navbar-btn pull-right" ng-show="!User.user.auth_token" ng-click="User.loginTwitter()">Sign in with Twitter</a>
+          <ul class="nav navbar-nav navbar-right" ng-show="User.user.auth_token">
+            <li><a ng-click="User.logout()" href="#">Logout</a></li>
+          </ul>
         </div>
       </nav>
     </header>
@@ -63,11 +66,12 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
     <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/jquery.cookie/jquery.cookie.js"></script>
 
         <script src="scripts/d41d8cd9.plugins.js"></script>
 
         <script src="scripts/3aaf8296.modules.js"></script>
 
-        <script src="scripts/8b941050.scripts.js"></script>
+        <script src="scripts/130946e8.scripts.js"></script>
 </body>
 </html>
