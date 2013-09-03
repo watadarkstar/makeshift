@@ -2,9 +2,17 @@
 
 angular.module('makeshiftApp')
 	.service('User', ($location, Env) ->
-		service = {
-			user: null
-		}
+		console.log $.cookie
+		$.cookie.json = true
+		userCache = $.cookie('user')
+
+		if userCache?
+		    service = { user: userCache }
+		else
+			service = {
+				user: null,
+				auth_token: null
+			}
 
 		service.loginTwitter = ->
 			callback_url = "http://makeshift-rails.herokuapp.com/signin?callback_url=" + encodeURIComponent(Env.domain + "#/authenticate")
@@ -14,6 +22,12 @@ angular.module('makeshiftApp')
 			service.user = {
 				auth_token: auth_token
 			}
+			$.cookie('user', service.user)
+
+		service.logout = ->
+			service.user = null
+			$.removeCookie('user')
+			$location.path("/")
 
 		return service
 	)

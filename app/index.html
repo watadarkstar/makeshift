@@ -44,7 +44,7 @@
           </ul>
           <a type="button" class="btn btn-primary login-btn navbar-btn pull-right" ng-show="!User.user.auth_token" ng-click="User.loginTwitter()">Sign in with Twitter</a>
           <ul class="nav navbar-nav navbar-right" ng-show="User.user.auth_token" >
-            <li><a ng-click="User.logout()">Logout</a></li>
+            <li><a ng-click="User.logout()" href="#">Logout</a></li>
           </ul>
         </div>
       </nav>
@@ -68,6 +68,7 @@
     <script src="bower_components/jquery/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/jquery.cookie/jquery.cookie.js"></script>
 
         <!-- build:js scripts/plugins.js -->
         <!-- endbuild -->
