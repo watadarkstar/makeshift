@@ -13,13 +13,13 @@
   <div class="form-group">
     <label for="inputEmail1" class="col-lg-2 control-label">Title</label>
     <div class="col-lg-10">
-      <input type="text" class="form-control" id="" placeholder="Title">
+      <input type="text" class="form-control" id="" placeholder="Title" ng-model="project.title">
     </div>
   </div>
   <div class="form-group">
     <label for="inputEmail1" class="col-lg-2 control-label">Description</label>
     <div class="col-lg-10">
-      <input type="text" class="form-control" id="" placeholder="Description">
+      <input type="text" class="form-control" id="" placeholder="Description" ng-model="project.description">
     </div>
   </div>
   <div class="form-group">
@@ -27,7 +27,7 @@
     <div class="col-lg-10">
       <input type="date" class="form-control" id="" placeholder="Start Date">
       <br>
-      <input type="time" class="form-control" id="" placeholder="Time">
+      <input type="time" class="form-control" id="" placeholder="Time" ng-model="project.startDate">
     </div>
   </div>
   <div class="form-group">
@@ -35,30 +35,30 @@
     <div class="col-lg-10">
       <input type="date" class="form-control" id="" placeholder="Start Date">
       <br>
-      <input type="time" class="form-control" id="" placeholder="Time">
+      <input type="time" class="form-control" id="" placeholder="Time" ng-model="project.endDate">
     </div>
   </div>
   <div class="form-group">
     <label for="inputPassword1" class="col-lg-2 control-label">Number of Milestones</label>
     <div class="col-lg-10">
-      <input type="text" maxlength="1" ng-model="nmilestones" class="form-control" id="" placeholder="Number of Milestones">
+      <input type="text" maxlength="1" class="form-control" id="" placeholder="Number of Milestones" ng-model="project.nmilestones">
     </div>
   </div>
-  <div class="form-group" ng-repeat="count in _.range(0,nmilestones)">
+  <div class="form-group" ng-repeat="obj in getMilestones()">
     <label for="inputPassword1" class="col-lg-2 control-label">Milestone {{$index + 1}}</label>
     <div class="col-lg-10">
-      <input type="text" class="form-control" id="" placeholder="Title">
+      <input type="text" class="form-control" id="" placeholder="Title" ng-model="obj.title">
       <br>
-      <input type="text" class="form-control" id="" placeholder="Description">
+      <input type="text" class="form-control" id="" placeholder="Description" ng-model="project.milestones[$index].description">
       <br>
-      <input type="date" class="form-control" id="" placeholder="Start Date">
+      <input type="date" class="form-control" id="" placeholder="Start Date" ng-model="project.milestones[$index].startDate">
       <br>
-      <input type="time" class="form-control" id="" placeholder="Time">
+      <input type="time" class="form-control" id="" placeholder="Time" ng-model="project.milestones[$index].time">
     </div>
   </div>
   <div class="form-group">
     <div class="col-lg-offset-2 col-lg-10">
-      <button type="submit" class="btn btn-primary">Create Challenge</button>
+      <button class="btn btn-primary" ng-click="save()">Create Challenge</button>
     </div>
   </div>
 </form>

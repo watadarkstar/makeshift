@@ -2,4 +2,15 @@
 
 angular.module('makeshiftApp')
   .service 'Baseapi', () ->
-    # AngularJS will instantiate a singleton by calling "new" on this function
+    service = {
+    	resource: null
+    }
+
+    resource = (url, data) ->
+    	service.resource = $resource(url, data)
+    	console.log "resource"
+	
+    save = ->
+    	console.log "save"
+
+    return service

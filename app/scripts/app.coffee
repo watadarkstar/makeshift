@@ -30,6 +30,7 @@ angular.module('makeshiftApp', [])
       })
       .when('/project/new', {
         templateUrl: 'views/new.html',
+        controller: 'ProjectCtrl'
         access: {
           user: true
         }

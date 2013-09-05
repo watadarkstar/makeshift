@@ -1,5 +1,9 @@
 'use strict';
 
 angular.module('makeshiftApp')
-  .service 'Project', () ->
-    # AngularJS will instantiate a singleton by calling "new" on this function
+  .service 'Project', (Baseapi) ->
+  	service = {}
+  	console.log "test"
+    service.save = ->
+    	console.log "foo"
+    return service
